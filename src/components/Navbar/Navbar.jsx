@@ -18,7 +18,7 @@ const Navbar = () => {
     }
 
   return (
-    <nav className='w-full fixed left-0 py-3 top-0 z-50 bg-pok-dark-200 border-pok-yellow-400 border-b bg-opacity-30 '>
+    <nav className='w-full fixed left-0 py-3 top-0 z-50 bg-pok-dark-200 border-pok-red-400 border-b bg-opacity-30 '>
         <section className='flex justify-around items-center sm:px12 sm:py-3 px-1 py-3 '>
             
             {/* logo */}
@@ -29,7 +29,7 @@ const Navbar = () => {
             </div>
 
             {/* button hamburger-menu */}
-            <button onClick={ToggleMenu} className="block md:hidden text-slate-300 hover:text-white font-bold text-xl p-1"> 
+            <button onClick={ToggleMenu} className="block md:hidden text-pok-slate-50 hover:text-white font-bold text-xl p-1"> 
                 <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     {/* validation function */}
                     {isOpen ? (<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d="M6 18L18 6M6 6l12 12"></path>) : (<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"></path>)}
@@ -41,7 +41,7 @@ const Navbar = () => {
                 <ul className='flex items-center gap-6 lg:gap-8'>
                     {navbarlinks.map((link) =>(
                         <li key={link.id}>
-                            <a className='text-pok-slate-50 sm:text-lg text-sm font-bold tracking-wide hover:text-pok-red-400 transition-t transition-colors duration-200' href={link.link}> {link.title}</a>
+                            <a className='text-pok-slate-50 sm:text-lg text-sm font-bold tracking-wide hover:text-pok-red-500 transition-t transition-colors duration-200' href={link.link}> {link.title}</a>
                         </li>
                     ) )}
                 </ul>
@@ -49,7 +49,7 @@ const Navbar = () => {
 
             {/* buttom mode dark/light */}
             <div className='hidden md:block items-center gap-4'>
-                <button aria-label="Toggle Theme" className="p-2.5 rounded-xl bg-poke-dark-100 hover:bg-slate-800 border border-slate-800 text-poke-gold hover:text-amber-300 active:scale-95 transition-all shadow-md flex items-center justify-center cursor-pointer">
+                <button aria-label="Toggle Theme" className="p-2.5 rounded-xl bg-poke-dark-100 hover:bg-slate-800 border border-slate-800 text-poke-gold hover:text-pok-yellow-400 active:scale-95 transition-all shadow-md flex items-center justify-center cursor-pointer">
                     <span className="text-lg">🌙</span>
                 </button>
             </div>
@@ -60,7 +60,7 @@ const Navbar = () => {
                 <ul className='flex flex-col px-4 py-2'>
                     {navbarlinks.map((link) =>(
                         <li key={link.id} className='py-2 text-center'>
-                            <a className='text-pok-slate-50 hover:text-pok-red-400 transition-t transition-colors duration-200 hover:border-b' href={link.link} onClick={() => setIsOpen(false)}> {link.title}</a>
+                            <a className='text-pok-slate-50 hover:text-pok-red-500 transition-t transition-colors duration-200 hover:border-b' href={link.link} onClick={() => setIsOpen(false)}> {link.title}</a>
                         </li>
                     ) )}
                 </ul>
