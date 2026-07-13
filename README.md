@@ -155,24 +155,24 @@ Para evitar que la aplicación se quede en blanco si la API falla o tarda en res
 
 ### 🖥️ Vista de Escritorio
 <p align="center">
-  <img src="../src/assets/images_desing/responsive-desing-desktop.webp" alt="Vista General Escritorio" width="800">
+  <img src="./src/assets/images_desing/responsive-desing-desktop.webp" alt="Vista General Escritorio" width="800">
 </p>
 
 <p align="center">
-  <img src="../src/assets/images_desing/responsive-desing-desktop-grid.webp" alt="Grid de Pokémon Escritorio" width="800">
+  <img src="./src/assets/images_desing/responsive-desing-desktop-grid.webp" alt="Grid de Pokémon Escritorio" width="800">
 </p>
 
 ### 📱 Vista Mobile & Tablet
 <p align="center">
-  <img src="../src/assets/images_desing/responsive-desing-tablet.webp" alt="Vista Tablet" width="600">
+  <img src="./src/assets/images_desing/responsive-desing-tablet.webp" alt="Vista Tablet" width="600">
 </p>
 
 <p align="center">
-  <img src="../src/assets/images_desing/responsive-desing-mobile.webp" alt="Vista Móvil" width="350">
+  <img src="./src/assets/images_desing/responsive-desing-mobile.webp" alt="Vista Móvil" width="350">
 </p>
 
 <p align="center">
-  <img src="../src/assets/images_desing/responsive-desing-mobile-menu.webp" alt="Vista Móvil" width="350">
+  <img src="./src/assets/images_desing/responsive-desing-mobile-menu.webp" alt="Vista Móvil" width="350">
 </p>
 
 
