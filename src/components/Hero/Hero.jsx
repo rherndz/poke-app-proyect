@@ -3,11 +3,12 @@ import searchIcon from "../../assets/icon/search_icon.webp";
 
 const hero = () => {
   return (
-    <section className="w-full flex justify-center mt-10 sm:mt-10 md:mt-10  lg:mb-15 ">
-      <div className="max-w-7xl mx-auto grid mt-15 mbe-1.5 grid-cols-1 md:grid-cols-2 lg:mt-6 gap-8 items-center bg-pok-slate-50/8 backdrop-blur-md">
+    <section className="w-full min-h-[calc(100vh-120px)] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8">
+      
+      <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-pok-slate-50/8 backdrop-blur-md rounded-3xl p-6 mt-25 sm:p-8 md:p-10 lg:p-12 shadow-xl overflow-hidden">
         
         {/* action panel */}
-        <div className="flex flex-col gap-4 p-6 sm:p-8 md:p-10 md:mt-45 lg:p-12 xl:p-16 text-slate-900">
+        <div className="flex flex-col gap-5 text-pok-dark-100 justify-center">
           
           {/* heading */}
           <div className="flex flex-col gap-1">
@@ -28,7 +29,9 @@ const hero = () => {
 
           {/* search bar */}
           <div className="w-full flex items-center bg-white rounded-xl overflow-hidden shadow-lg focus-within:ring-2 focus-within:ring-pok-red-400/50 transition-all duration-200">
-            <input type="text" placeholder="Buscar Pokémon por nombre o número..." className="w-full px-4 py-3.5 bg-transparent text-slate-800 placeholder-slate-400 font-sans text-sm font-medium focus:outline-none sm:text-base"/>
+            
+            <input type="text" placeholder="Buscar Pokémon por nombre o número..." className=" w-full px-4 py-3.5 bg-transparent text-slate-800 placeholder-slate-400 font-sans text-sm font-medium focus:outline-none sm:text-base"/>
+
             <button className="bg-pok-red-500 text-white p-3.5 flex items-center justify-center cursor-pointer">
               <img src={searchIcon} alt="search icon" className="w-8" />
             </button>
@@ -44,10 +47,11 @@ const hero = () => {
         </div>
 
         {/* image panel */}
-        <div className="w-full flex justify-center p-6 sm:p-8 md:p-0">
-          <img src={pokdexImg} alt="Pokédex" className="w-full max-w-sm h-auto object-contain sm:max-w-md md:max-xl"/>
+        <div className="w-full flex justify-center items-center p-4 md:p-0">
+          <img src={pokdexImg} alt="Pokédex" className="w-full max-w-50 sm:max-w-65 md:max-w-75 lg:max-w-sm h-auto max-h-75 md:max-h-100 object-contain drop-shadow-2xl"/>
         </div>
       </div>
+
     </section>
   )
 }
