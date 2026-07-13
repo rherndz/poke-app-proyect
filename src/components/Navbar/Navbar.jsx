@@ -18,8 +18,8 @@ const Navbar = () => {
     }
 
   return (
-    <nav className='w-full sticky py-3 top-0 z-50 bg-pok-dark-200 backdrop-blur-md border-b border-slate-800 transition-colors duration-300'>
-        <section className='flex justify-around items-center sm:px12 sm:py-3 px-1 py-3 bg-pok-dark-200'>
+    <nav className='w-full fixed left-0 py-3 top-0 z-50 bg-pok-dark-200 border-pok-yellow-400 border-b bg-opacity-30 '>
+        <section className='flex justify-around items-center sm:px12 sm:py-3 px-1 py-3 '>
             
             {/* logo */}
             <div className='flex items-center gap-3'>
