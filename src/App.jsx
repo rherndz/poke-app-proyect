@@ -1,12 +1,12 @@
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import { Footerbar } from './components/Footerbar/Footerbar';
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Hero from "./components/Hero/Hero.jsx";
+import { Footerbar } from './components/Footerbar/Footerbar.jsx';
 import heroWallpaper from "./assets/images/hero_wallpaper.webp";
 
-import { usePokemons } from './hooks/usePokemons';
-import { FeaturedGrid } from './components/FeaturedGrid/FeaturedGrid';
+import { usePokemons } from './hooks/usePokemons.jsx';
+import { FeaturedGrid } from './components/FeaturedGrid/FeaturedGrid.jsx';
 
-import { PokemonGrid } from './components/PokemonGrid/PokemonGrid';
+import { PokemonGrid } from './components/PokemonGrid/PokemonGrid.jsx';
 
 function App() {
 
@@ -49,7 +49,7 @@ function App() {
   }
 
   return (
-    <main className="bg-mist-400 min-h-screen text-white">
+    <main className="bg-mist-400 min-h-screen">
       <Navbar/>
 
       <section style={bgImagen} className="overflow-hidden min-h-screen">
