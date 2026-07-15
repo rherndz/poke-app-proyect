@@ -10,7 +10,7 @@ export const PokemonGrid = ({ pokemons }) => {
           Todos los Pokémon
         </h2>
 
-         <a className="inline-flex items-center justify-center gap-1 text-xs sm:text-sm font-bold  bg-pok-dark-100 cursor-pointer text-pok-red-400 hover:bg-pok-red-400 hover:text-pok-slate-50 rounded-2xl p-2 ">
+         <a className="flex items-center justify-center gap-1 text-xs sm:text-sm font-bold  bg-pok-dark-100 cursor-pointer text-pok-slate-50 hover:bg-pok-red-400 hover:text-pok-slate-50 rounded-2xl px-4 py-2 ">
           Ver todos 
         </a>
       </div>

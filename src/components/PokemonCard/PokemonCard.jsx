@@ -1,9 +1,9 @@
 export const PokemonCard = ({ id, name, image, types }) => {
   return (
-    <div className="bg-pok-dark-100 rounded-2xl p-4 border border-pok-dark-200 flex flex-col justify-between items-start transition-all duration-300 hover:border-white hover:scale-[1.02] w-full max-w-85 sm:max-w-full">
+    <div className="bg-pok-dark-100 rounded-2xl p-4 border-2 border-pok-dark-200 flex flex-col justify-between items-start transition-all duration-300 hover:border-pok-red-400 hover:scale-[1.02] w-full max-w-85 sm:max-w-full max-h-full">
       
       {/* pokemon image container */}
-      <div className="w-full h-40 sm:h-48 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-pok-slate-50 p-3">
+      <div className="w-full h-40 sm:h-48 flex items-center justify-center mb-4 overflow-hidden rounded-xl  p-3 bg-pok-card">
         <img src={image} alt={name} className="max-w-full max-h-full object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] transition-transform duration-300 hover:scale-105" loading="lazy"
         />
       </div>
