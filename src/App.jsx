@@ -7,6 +7,7 @@ import { usePokemons } from './hooks/usePokemons.jsx';
 import { FeaturedGrid } from './components/FeaturedGrid/FeaturedGrid.jsx';
 
 import { PokemonGrid } from './components/PokemonGrid/PokemonGrid.jsx';
+import PokemonTypes from "./components/PokemonTypes/PokemonTypes.jsx";
 
 function App() {
 
@@ -49,12 +50,14 @@ function App() {
   }
 
   return (
-    <main className="bg-mist-400 min-h-screen">
+    <main className="bg-white min-h-screen">
       <Navbar/>
 
       <section style={bgImagen} className="overflow-hidden min-h-screen">
         <Hero/>
       </section>
+
+      <PokemonTypes/>
 
       <section className="p-4 my-4 ">
         <FeaturedGrid pokemons={pokemonsDestacados} isLoading={isLoading}/>
