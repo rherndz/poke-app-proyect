@@ -1,15 +1,17 @@
-import Navbar from "./src/components/Navbar/Navbar";
-import Hero from "./src/components/Hero/Hero";
-import heroWallpaper from './src/assets/images/hero_wallpaper.webp';
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Hero from "./components/Hero/Hero.jsx";
+import { Footerbar } from './components/Footerbar/Footerbar.jsx';
+import heroWallpaper from "./assets/images/hero_wallpaper.webp";
 
-import { usePokemons } from './src/hooks/usePokemons';
-import { FeaturedGrid } from './src/components/FeaturedGrid/FeaturedGrid';
+import { usePokemons } from './hooks/usePokemons.jsx';
+import { FeaturedGrid } from './components/FeaturedGrid/FeaturedGrid.jsx';
 
-import { PokemonGrid } from './src/components/PokemonGrid/PokemonGrid';
+import { PokemonGrid } from './components/PokemonGrid/PokemonGrid.jsx';
+import PokemonTypes from "./components/PokemonTypes/PokemonTypes.jsx";
 
 function App() {
 
-  const { pokemons, isLoading, error } = usePokemons(0, 155);
+  const { pokemons, isLoading, error } = usePokemons(0, 16);
 
   const bgImagen = {
         backgroundImage: `url(${heroWallpaper})`,
@@ -35,10 +37,10 @@ function App() {
       </main>
     )
   }
-
+  /* uploading data web */
   if (isLoading || !pokemons) {
     return (
-      <main className="bg-pok-dark-200 min-h-screen text-pok-slate-50 flex items-center justify-center">
+      <main className="bg-pok-dark-100 min-h-screen text-pok-slate-50 flex items-center justify-center">
         <div className="flex flex-col items-center gap-3">
           <div className="w-10 h-10 border-4 border-pok-red-500 border-t-transparent rounded-full animate-spin"></div>
           <p className="text-sm font-medium text-pok-slate-50 animate-pulse">Cargando Pokédex...</p>
@@ -48,16 +50,25 @@ function App() {
   }
 
   return (
-    <main className="bg-neutral-950 min-h-screen text-white">
+    <main className="bg-white min-h-screen">
       <Navbar/>
+
       <section style={bgImagen} className="overflow-hidden min-h-screen">
         <Hero/>
       </section>
 
-      <FeaturedGrid pokemons={pokemonsDestacados} isLoading={isLoading}/>
+      <PokemonTypes/>
 
-      <PokemonGrid pokemons={pokemons} />
-    </main>
+      <section className="p-4 my-4 ">
+        <FeaturedGrid pokemons={pokemonsDestacados} isLoading={isLoading}/>
+      </section>
+
+      <section className="py-8 my-4 ">
+        <PokemonGrid pokemons={pokemons} />
+      </section>
+      
+      <Footerbar/>
+    </main>    
   );
 }
 

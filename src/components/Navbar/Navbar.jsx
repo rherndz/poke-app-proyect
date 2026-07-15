@@ -3,9 +3,10 @@ import logo from '../../assets/icon/pokeball_icon.webp'
 
 const navbarlinks = [
     {id:1,title:"Inicio",link:"/"},
-    {id:2,title:"Tipos",link:"/"},
-    {id:3,title:"Noticias",link:"/"},
-    {id:4,title:"Blog",link:"/"}
+    {id:3,title:"Pokemones",link:"/"},
+    {id:4,title:"Tipos",link:"/"},
+    {id:5,title:"Noticias",link:"/"},
+    {id:6,title:"Blog",link:"/"}
 ]
 
 const Navbar = () => {
@@ -18,8 +19,8 @@ const Navbar = () => {
     }
 
   return (
-    <nav className='w-full fixed left-0 py-3 top-0 z-50 bg-pok-dark-200 border-pok-red-400 border-b bg-opacity-30 '>
-        <section className='flex justify-around items-center sm:px12 sm:py-3 px-1 py-3 '>
+    <nav className='w-full fixed left-0 py-3 top-0 z-50 bg-pok-dark-200 border-pok-red-400 border-b bg-opacity-30'>
+        <section className='flex justify-between items-center px-7 py-3 sm:px12 sm:py-3 sm:justify-around '>
             
             {/* logo */}
             <div className='flex items-center gap-3'>
@@ -43,7 +44,7 @@ const Navbar = () => {
                         <li key={link.id}>
                             <a className='text-pok-slate-50 sm:text-lg text-sm font-bold tracking-wide hover:text-pok-red-500 transition-t transition-colors duration-200' href={link.link}> {link.title}</a>
                         </li>
-                    ) )}
+                    ))}
                 </ul>
             </div>
 
@@ -55,25 +56,23 @@ const Navbar = () => {
             </div>
         </section>
 
-            {/* -- navegation mobile -- */}
-            <div  className={`md:hidden absolute mt-3 w-full bg-pok-dark-100 transition-all duration-300 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-                <ul className='flex flex-col px-4 py-2'>
+        {/* -- navegation mobile -- */}
+        <div  className={`md:hidden absolute mt-3 w-full bg-pok-dark-100 transition-all duration-300 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+            <ul className='flex flex-col px-4 py-2'>
                     {navbarlinks.map((link) =>(
                         <li key={link.id} className='py-2 text-center'>
                             <a className='text-pok-slate-50 hover:text-pok-red-500 transition-t transition-colors duration-200 hover:border-b' href={link.link} onClick={() => setIsOpen(false)}> {link.title}</a>
                         </li>
                     ) )}
-                </ul>
+            </ul>
 
-                {/* buttom mode dark/light */}
-                <div className='flex flex-col'>
-                    <button aria-label="Toggle Theme" className="p-2.5 bg-poke-dark-100 hover:bg-slate-800 border border-slate-800 text-poke-gold hover:text-amber-300 active:scale-95 transition-all shadow-md flex items-center justify-center cursor-pointer">
-                        <span className="text-lg">🌙</span>
-                    </button>
-                </div>
+            {/* buttom mode dark/light */}
+            <div className='flex flex-col'>
+                <button aria-label="Toggle Theme" className="p-2.5 bg-poke-dark-100 hover:bg-slate-800 border border-slate-800 text-poke-gold hover:text-amber-300 active:scale-95 transition-all shadow-md flex items-center justify-center cursor-pointer">
+                    <span className="text-lg">🌙</span>
+                </button>
             </div>
-
-            
+        </div>
     </nav>
   )
 }

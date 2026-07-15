@@ -7,18 +7,20 @@
     --font-sans: 'Plus Jakarta Sans', sans-serif;
 
     /*primary colors*/
-    --color-pok-red-400: oklch(0.63 0.24 23.4);/*border*/
-    --color-pok-red-500: oklch(0.53 0.24 23.4);/*text*/
-    --color-pok-slate-50: oklch(98.4% 0.003 247.858);/*text*/
-    --color-pok-yellow-400: oklch(85.2% 0.199 91.936);/*text*/
-    --color-pok-dark-100: oklch(0.18 0.03 258);/*background-card*/
-    --color-pok-dark-200: oklch(0.12 0.03 255);/*Background*/
+    --color-pok-red-400: oklch(0.63 0.24 23.4);/* border or decoration */
+    --color-pok-red-500: oklch(0.53 0.24 23.4);/* highlighted text */
+    --color-pok-slate-50: oklch(98.4% 0.003 247.858);/* neutral text */
+    --color-pok-dark-100: oklch(0.18 0.03 258);/* cards background */
+    --color-pok-dark-200: oklch(0.12 0.03 255);/* components background */
+    --background-image-pok-card: linear-gradient(180deg, oklch(0.79 0.14 189.37), oklch(0.94 0.12 94.6));
     
     /*elemental colors*/
-    --color-type-grass: oklch(0.67 0.19 143.6);
-    --color-type-fire: oklch(0.64 0.21 34.6);
-    --color-type-water: oklch(0.61 0.15 231.2);
-    --color-type-electric: oklch(0.84 0.18 84.3);
+    --background-image-poke-fire: linear-gradient(135deg, oklch(0.48 0.22 33.15), oklch(0.35 0.17 31.78));
+    --background-image-poke-water: linear-gradient(135deg, oklch(0.57 0.14 250.7), oklch(0.41 0.13 252.1));
+    --background-image-poke-plant: linear-gradient(135deg, oklch(0.57 0.16 137.9), oklch(0.41 0.12 138.8));
+    --background-image-poke-electric: linear-gradient(135deg, oklch(0.72 0.19 82.6), oklch(0.55 0.15 82.8));
+    --background-image-poke-pychic: linear-gradient(135deg, oklch(0.51 0.21 3.56), oklch(0.34 0.16 4.31));
+    --background-image-poke-dragon: linear-gradient(135deg, oklch(0.39 0.21 300.52), oklch(0.23 0.15 299.7));
 }
 
 * {
